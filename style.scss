@@ -1,0 +1,190 @@
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width:100vw;
+  height:100vh;
+  font-family: 'Kulim Park', sans-serif;
+  font-size:62.5%;
+
+  display:flex;
+  justify-content:flex-start;
+}
+
+.content{
+  flex: 0 0 88%;
+
+}
+
+.toggle{
+  width:1.2rem;
+  height:auto;
+  position:absolute;
+  right:0;
+  top:-25%;
+  margin:2.5px;
+
+
+  &__item{
+    width:100%;
+    height:3px;
+    background:white;
+    margin-bottom:3px;
+    transition: all .1s;
+
+  }
+
+  &:hover &__item:first-child{
+    width:90%;
+  }
+
+  &:hover &__item:nth-child(2){
+    width:70%;
+  }
+  &:hover &__item:last-child{
+    width:50%;
+  }
+
+
+}
+
+.sidebar{
+  flex: 0 0 12%;
+  background-color:#492d5e;
+
+
+  display:flex;
+  flex-direction:column;
+
+
+  &__toggle{
+    height:1.5rem;
+    width:100%;
+
+    position:relative;
+
+  }
+
+
+
+
+
+
+  &__profile{
+    flex: 0 0 28%;
+    padding:.5rem ;
+
+    background-image: linear-gradient(
+                    to right bottom,
+                    rgba(#4a395b, 0.7),
+                    rgba(#6c5584, 0.7)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSfoRDI0Dk1P6B9PqyMnejXCyT74c6iZ48WPNA7eojJfsCli1Uv);
+    background-size:cover;
+
+
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-around;
+    align-items:center;
+
+  }
+
+  &__image{
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &__user{
+    font-size:.8rem;
+    color:white;
+    font-weight:400;
+  }
+
+  &__button{
+    background:none;
+    border:1px solid #ddd;
+    border-radius:1rem;
+    padding: .5rem;
+    color:white;
+    font-size:.5rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+
+    &:hover{
+      outline:none;
+      cursor:pointer;
+    }
+
+  }
+
+
+  &__menu{
+    flex: 0 0 62%;
+
+    list-style:none;
+
+  }
+  &__item-header{
+    font-size:.7rem;
+    font-weight:700;
+    text-transform:uppercase;
+    border-bottom:.1px solid #5e5067;
+    color:#896449;
+    padding:.5rem 0 .5rem .5rem;
+
+  }
+
+  &__item{
+
+    border-bottom:.1px solid #5e5067;
+
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    &:hover{
+      background-color:#553a6f;
+    }
+
+  }
+
+  &__item:hover > svg{
+
+    transform: rotate(90deg);
+  }
+
+
+  &__icon{
+    height:.8rem;
+    width:.8rem;
+    fill:white;
+    margin-right:.5rem;
+    transition: all .1s;
+  }
+
+  &__link{
+    text-decoration:none;
+    font-size:.7rem;
+
+    font-weight:400;
+    padding:.5rem 0 .5rem .5rem;
+    color:white;
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+
+  }
+
+
+
+}
