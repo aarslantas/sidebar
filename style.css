@@ -45,7 +45,7 @@
     position: relative;
 }
 .sidebar__profile {
-    flex: 0 0 28%;
+    flex: 30%;
     padding: 0.5rem;
     background-image: linear-gradient(to right bottom, rgba(74, 57, 91, 0.7), rgba(108, 85, 132, 0.7)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSfoRDI0Dk1P6B9PqyMnejXCyT74c6iZ48WPNA7eojJfsCli1Uv);
     background-size: cover;
@@ -80,7 +80,7 @@
     cursor: pointer;
 }
 .sidebar__menu {
-    flex: 0 0 62%;
+    flex: 70%;
     list-style: none;
 }
 .sidebar__item-header {
@@ -116,7 +116,32 @@
     font-weight: 400;
     padding: .5rem 0 .5rem .5rem;
     color: white;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.selectedItemClass {
+    position: relative;
+    background-color: #492d5e;
+    padding: .3rem;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.selectedItemClass::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #492d5e;
+    z-index: 10;
+    position: absolute;
+    left: -.4px;
+    top: 50%;
+    transform: translateY(-50%);
 }
